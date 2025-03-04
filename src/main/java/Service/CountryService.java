@@ -31,7 +31,7 @@ public class CountryService {
             JsonObject countryData = jsonArray.getJsonObject(0);
             String countryName = countryData.getJsonObject("name").getString("common");
 
-            return countryName; // Return the common name of the country
+            return countryName;
         } catch (Exception e) {
             throw new WebApplicationException("Error fetching country name", 500);
         }
